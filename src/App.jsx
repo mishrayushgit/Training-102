@@ -3,26 +3,17 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Link } from 'react-router-dom'
-
+import AllRoutes from './routes/Allroutes'
+import Navbar from './components/Navbar'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Welcome to the Button Hub</h1>
-      <div className="flex flex-wrap gap-2 mb-6">
-        {Array.from({ length: 10 }).map((_, i) => (
-          <Link
-            key={i}
-            to={`/component${i + 1}`}
-            className="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600"
-          >
-            Go to Component {i + 1}
-          </Link>
-        ))}
-      </div>
-      </div>
+    <div class="absolute top-0 z-[-2] h-screen w-screen rotate-180 transform bg-white bg-[radial-gradient(60%_120%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(252,205,238,.5)_100%)]">
+    </div>
+      <Navbar/>
+      <AllRoutes/>
     </>
   )
 }
